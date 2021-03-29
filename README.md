@@ -1,24 +1,7 @@
-# movie-vuer
+# Movie-Vuer
 
-## Project setup
-```
-npm install
-```
+Movie review scraping app created with Vue as part of Nashville Software School's Vue workshop
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Deployed via Firebase:
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://movievuer-82737.web.app/
