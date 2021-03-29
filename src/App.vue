@@ -1,56 +1,34 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
+    <app-header />
     <v-main>
-      <HelloWorld />
+      <v-container>
+        <search-results />
+        <v-row class="mt-6">
+          <v-col :sm="12" :md="6">
+            <movie-details />
+          </v-col>
+          <v-col :sm="12" :md="6">
+            <movie-reviews />
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import AppHeader from "./components/AppHeader.vue";
+import MovieDetails from "./components/MovieDetails.vue";
+import SearchResults from "./components/SearchResults";
+import MovieReviews from "./components/MovieReviews";
 
 export default {
-  name: "App",
-
   components: {
-    HelloWorld
+    SearchResults,
+    AppHeader,
+    MovieDetails,
+    MovieReviews,
   },
-
-  data: () => ({
-    //
-  })
 };
 </script>
